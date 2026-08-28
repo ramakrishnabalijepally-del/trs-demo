@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>TRS Forms — Register of Examination Solutions</title>
+    <meta
+      name="description"
+      content="TRS Forms has automated examination processes for Indian universities, boards and recruitment bodies since 1993: dummy numbering, OMR and OCR capture, on-screen marking, secure certificates."
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // GitHub Pages has no server-side routing, so a direct load of e.g.
+      // /trs-demo/careers 404s before React Router ever runs. 404.html
+      // redirects here with the intended path stashed in the query string;
+      // this restores it to the URL bar before the app mounts.
+      (function () {
+        var redirect = sessionStorage.getItem("spa-redirect");
+        if (redirect) {
+          sessionStorage.removeItem("spa-redirect");
+          history.replaceState(null, "", redirect);
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TRS Forms</title>
+    <script>
+      // GitHub Pages serves this file for any path it doesn't recognise as a
+      // real file — which is every React Router route. Stash the path the
+      // visitor actually wanted, then send them to the real app shell so
+      // index.html's own script can restore it and let the router take over.
+      var base = "/trs-demo/";
+      var path = location.pathname.slice(base.length);
+      sessionStorage.setItem("spa-redirect", base + path + location.search + location.hash);
+      location.replace(base);
+    </script>
+  </head>
+  <body></body>
+</html>
